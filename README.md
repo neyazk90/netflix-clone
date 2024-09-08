@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# netflix-gpt
+This project is a Netflix-like web application built with modern web technologies, utilizing the TMDB (The Movie Database) API for fetching and displaying a wide range of movies and TV shows. Users can search for content, view detailed information about movies/TV shows, and browse categories.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Key Features
+**OpenAPI Integration:** Secure and efficient API interaction.
+**Search Functionality:** Search for movies and TV shows using TMDB's API.
+**Movie/TV Show Browsing:** Browse through various categories like popular, trending, top-rated, and genre-specific content.
+**Responsive Design:** Optimized for both desktop and mobile views.
+**Dynamic Pages:** Detailed pages for each movie/show, including cast, ratings, and descriptions.
+**Lazy Loading:** Efficient loading of content to improve performance.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# Technologies Used:
+**UI Library:** React
+**Bundler:** VITE
+**Tailwind CSS:** For responsive UI design.
+**Axios:** For making API requests.
+**TMDB API:** To fetch movie and TV show data.
+**OpenAPI:** Standard for interacting with external APIs.
