@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const appSlice = createSlice({
     name: 'app',
     initialState: {
-        user: true,
+        user: false,
         lang: 'en',
         isAuthForm: false,
     },
