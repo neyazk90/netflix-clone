@@ -20,10 +20,13 @@ export default {
         bold: '',
       },
       fontSize:{
-        heading: '',
-        subHeading: '',
+        heading: '3.5rem',
+        subHeading: '1.25rem',
         hintText:'',
-      } 
+      },
+      width: {
+        w20:'20%'
+      }
     },
   },
   plugins: [],

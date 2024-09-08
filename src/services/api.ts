@@ -5,15 +5,17 @@ const apiClient = axios.create({
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
+    Authorization: 'Bearer '+ import.meta.env.VITE_API_TMDB_TOKEN
   },
+
 });
 
 apiClient.interceptors.request.use(
     (config) => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        config.headers['Authorization'] = `Bearer ${token}`;
-      }
+      // const token = localStorage.getItem('token');
+      // if (token) {
+      //   config.headers['Authorization'] = `Bearer ${token}`;
+      // }
       return config;
     },
     (error) => {
@@ -30,3 +32,7 @@ apiClient.interceptors.request.use(
       return Promise.reject(error);
     }
   );
+
+export const get = (url:string) => { 
+    return apiClient.get(url)
+}
