@@ -3,11 +3,13 @@ import { lang } from '../../locale/language';
 import Button from '../UI/Button';
 import { useNavigate } from 'react-router-dom';
 import { addUser } from '../../store/slices/appSlice';
-
+import { appState } from '../../shared/app.modal';
+type LanguageKey = 'en' | 'hindi' | 'ur';
 const Auth = () => {
+   
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const langKey = useSelector(store => store?.app.lang);
+    const langKey:LanguageKey = useSelector((store:appState) => store?.app.lang  as LanguageKey);
 
     const authHandler = () => {
         dispatch(addUser(true));
