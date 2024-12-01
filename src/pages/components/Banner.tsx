@@ -1,12 +1,14 @@
-import Auth from '../../components/auth/auth';
+import Auth from '../../components/auth/Auth';
 import Button from '../../components/UI/Button';
 import { lang } from '../../locale/language'
 import { useSelector } from 'react-redux'
+import { appState, LanguageKey } from '../../shared/app.modal';
+
 
 
 const Banner = () => {
-  const langKey = useSelector(store => store?.app.lang);
-  const isAuthFormVisible = useSelector(store => store?.app.isAuthForm);
+  const langKey = useSelector((store:appState) => store?.app.lang as LanguageKey);
+  const isAuthFormVisible = useSelector((store:appState) => store?.app.isAuthForm);
 
   const getStartedHandler = () => {
     console.log('getStartedHandler')

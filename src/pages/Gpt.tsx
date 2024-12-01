@@ -3,11 +3,12 @@ import { useEffect } from "react"
 import Button from "../components/UI/Button";
 import { useSelector } from "react-redux";
 import { lang } from "../locale/language";
+import { appState, LanguageKey } from "../shared/app.modal";
 
 
 
 const Gpt = () => {
-  const langKey = useSelector(store => store?.app.lang);
+  const langKey = useSelector((store:appState) => store?.app.lang as LanguageKey);
   useEffect(() => {
     const client = new OpenAI({
       apiKey: import.meta.env.VITE_API_OPENAPI, // This is the default and can be omitted

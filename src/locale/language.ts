@@ -1,4 +1,31 @@
-export const lang = {
+interface Language {
+    homePageTitle: string;
+    priceText: string;
+    subscriptionText: string;
+    emailPlaceholder: string;
+    getStartedCTAText: string;
+    login: string;
+    logout: string;
+    register: string;
+    popularMovieLabel: string;
+    nowPlayingMovieLabel: string;
+    search: string;
+    searchPlaceholder: string;
+    authForm: {
+        email: string;
+        username?: string;
+        password: string;
+        passwordPlaceholder: string;
+    };
+  }
+  
+  interface Languages {
+    en: Language;
+    hindi: Language;
+    ur: Language;
+  }
+
+export const lang: Languages = {
     en: {
         homePageTitle: 'Unlimited movies, TV shows and more',
         priceText: 'Starts at ₹149. Cancel anytime.',
