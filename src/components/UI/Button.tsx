@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ size = 'medium', btnText, btnWasClicked
     block:'w-full'
   };
   return (
-    <button onClick={btnWasClicked} className={`${sizeClasses[size]} py-2 px-8 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-darkenPrimary hover:shadow-lg transition duration-300 ease-in-out`}>{ btnText }</button>
+    <button onClick={btnWasClicked} className={`${sizeClasses[size]} py-2 mr-2 px-8 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-darkenPrimary hover:shadow-lg transition duration-300 ease-in-out`}>{ btnText }</button>
   )
 }
 

@@ -4,12 +4,13 @@ import Button from "../Button"
 import { lang } from "../../../locale/language"
 import { useDispatch, useSelector } from "react-redux"
 import { addUser, isAuthForm } from "../../../store/slices/appSlice"
+import { appState, LanguageKey } from "../../../shared/app.modal"
 
 
 const Header = () => {
   const dispatch = useDispatch();
-  const langKey = useSelector(store => store?.app.lang);
-  const auth = useSelector(store => store?.app.user);
+  const langKey = useSelector((store:appState) => store?.app.lang as LanguageKey);
+  const auth = useSelector((store:appState) => store?.app.user);
 
   const clickHandler = () => {
     if (auth) {
@@ -30,6 +31,9 @@ const Header = () => {
         </Link>
       </div>
       <div>
+      <Link className="mr-2 btn bg-slate-200 px-2 py-2 rounded-md text-black" to="explorer">Explorer</Link>
+        <Link className="mr-2 btn bg-slate-200 px-2 py-2 rounded-md text-black" to="type-ahead">Search</Link>
+      {/* <Button btnText="Type A head" btnWasClicked={ clickHandler} /> */}
         <Language />
         <Button btnText={auth ? lang[langKey].logout : lang[langKey].login} btnWasClicked={ clickHandler} />
       </div>

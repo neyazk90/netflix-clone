@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Button from "../components/UI/Button";
+import { movie } from "../shared/app.modal";
 
 interface iVideoInfo {
     videoId: string
@@ -9,11 +9,11 @@ interface iVideoInfo {
 const Video: React.FC<iVideoInfo> = ({ videoId = '6XUKdOSu_G8' }) => {
 
 
-    const nowPlayingMovie = useSelector(store => store?.movieList.nowPlayingMovies);
+    // const nowPlayingMovie = useSelector((store:movie) => store?.movieList.nowPlayingMovies);
 
-    const playVideoHandler = () => {
+    // const playVideoHandler = () => {
 
-    }
+    // }
     return (
         <>
             {/* <div className='absolute h-screen z-10 bg-[#3f3b3b32] w-full'>

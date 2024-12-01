@@ -4,14 +4,15 @@ import usePopularMovies from "../hooks/useGetPopularMovies";
 import { useSelector } from "react-redux";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import { lang } from "../locale/language";
+import { appState, LanguageKey, movie } from "../shared/app.modal";
 
 
 const Home = () => {
   usePopularMovies();
   useNowPlayingMovies();
-  const langKey = useSelector(store => store?.app.lang);
-  const popularMovie = useSelector(store => store?.movieList.popularMovies);
-  const nowPlayingMovie = useSelector(store => store?.movieList.nowPlayingMovies);
+  const langKey = useSelector((store:appState) => store?.app.lang as LanguageKey);
+  const popularMovie = useSelector((store:movie) => store?.movieList.popularMovies);
+  const nowPlayingMovie = useSelector((store:movie) => store?.movieList.nowPlayingMovies);
   return (
     <div>
       <Banner />
